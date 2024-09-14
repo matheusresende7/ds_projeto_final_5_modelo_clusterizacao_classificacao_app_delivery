@@ -1,2 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Definindo finais de linha para manter a compatibilidade do projeto
+*.py text eol=lf
+*.cfg text eol=lf
+*.csv text eol=lf 
+
+# Ignorando diretórios e arquivos sem utilidade ao rodar o projeto
+case/ export-ignore
+images/ export-ignore
+presentations/ export-ignore
+venv/ export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
