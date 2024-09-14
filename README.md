@@ -1,25 +1,25 @@
  ## Projeto
-Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?# ciencia_de_dados_projeto_final_0_modelo_de_projeto
+Modelos de clusterização e classificação para segmentação de clientes em campanhas de marketing em uma plataforma de delivery
 
 
 ## Objetivo
-Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?
+............................
 
 
 ## Descrição
-Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?
+............................
 
 
 ## Metodologia 5W2H
 |**Questionamento** |**Descrição**|
 |---------|-------|
-|**What?**<br>O que? | Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?|
-|**Where?**<br>Onde? | Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?|
-|**When?**<br>Quando? | Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?|
-|**Who?**<br>Quem? | Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?|
-|**Why?**<br>Por quê? | Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?|
-|**How?**<br>Como? | Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?|
-|**How Much?**<br>Quanto? | Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere placeat a odit tempore. Non tempora eligendi ex culpa odit aut cupiditate veritatis et quibusdam fugit. Aut autem iusto ex deserunt nihil ut sunt iusto vel quisquam harum?|
+|**What?**<br>O que? | ............................|
+|**Where?**<br>Onde? |............................|
+|**When?**<br>Quando? | ............................|
+|**Who?**<br>Quem? | ............................|
+|**Why?**<br>Por quê? | ............................|
+|**How?**<br>Como? | ............................|
+|**How Much?**<br>Quanto? | ............................|
 
 
 ## Fontes
