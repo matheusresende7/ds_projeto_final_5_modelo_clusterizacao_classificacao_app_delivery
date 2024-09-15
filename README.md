@@ -3,11 +3,13 @@
 ![Wallpaper](images/illustrations/wallpaper.png)
 
 ## Projeto
-Modelos de clusterização e classificação para segmentação de clientes em campanhas de marketing em uma plataforma de delivery
+**Modelos de clusterização e classificação** para segmentação de clientes em campanhas de marketing em uma plataforma de delivery.
 
 
 ## Objetivo
-O objetivo do projeto é, a partir de uma campanha piloto, construir um **modelo de clusterização** para segmentação de clientes em campanhas de marketing em uma plataforma de delivery. De forma que o modelo preveja o comportamento dos clientes e torne possível aplicá-lo ao restante da base de clientes, permitindo à empresa selecionar os clientes que têm maior probabilidade de adquirir a oferta, visando ter campanhas de marketing altamente lucrativa. E em seguida, construir um **modelo de classificação** de acordo com os resultados obtidos no modelo inicial para fazer a segmentação dos futuros clientes da empresam, seguindo os mesmos propósitos.
+O objetivo do projeto é, a partir dos dados de uma campanha piloto, construir um **modelo de clusterização** para segmentação de clientes em campanhas de marketing em uma plataforma de delivery. <br><br>
+A intenção é que o modelo preveja o comportamento dos consumidores e torne possível aplicá-lo a toda a base de clientes, permitindo que a empresa selecione os clientes que têm maior probabilidade de adquirir a oferta, e assim resultando em campanhas de marketing altamente lucrativas. <br><br>
+E em seguida, construir um **modelo de classificação** de acordo com os resultados obtidos no modelo inicial para fazer a segmentação dos futuros clientes da empresa.
 
 
 ## Descrição
