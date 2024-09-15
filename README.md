@@ -1,4 +1,6 @@
-![Wallpaper](../images/illustrations/wallpaper.png)
+# Ciência de Dados - Projeto Final 5
+
+![Wallpaper](images/illustrations/wallpaper.png)
 
 ## Projeto
 Modelos de clusterização e classificação para segmentação de clientes em campanhas de marketing em uma plataforma de delivery
@@ -94,7 +96,7 @@ O objetivo do projeto é, a partir de uma campanha piloto, construir um **modelo
 
 ### Cronograma do Projeto - Gráfico de Gantt
 
-![Schedule](../images/outputs/schedule.png)
+![Schedule](images/outputs/schedule.png)
 
 
 ## Resultados
