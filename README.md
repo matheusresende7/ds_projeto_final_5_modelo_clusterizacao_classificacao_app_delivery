@@ -7,8 +7,10 @@
 
 
 ## Objetivo
-O objetivo do projeto é, a partir dos dados de uma campanha piloto, construir um **modelo de clusterização** para segmentação de clientes em campanhas de marketing em uma plataforma de delivery. <br><br>
-A intenção é que o modelo preveja o comportamento dos consumidores e torne possível aplicá-lo a toda a base de clientes, permitindo que a empresa selecione os clientes que têm maior probabilidade de adquirir a oferta, e assim resultando em campanhas de marketing altamente lucrativas. <br><br>
+O objetivo do projeto é, a partir dos dados de uma campanha piloto, construir um **modelo de clusterização** para segmentação de clientes em campanhas de marketing em uma plataforma de delivery. <br>
+
+A intenção é que o modelo preveja o comportamento dos consumidores e torne possível aplicá-lo a toda a base de clientes, permitindo que a empresa selecione os clientes que têm maior probabilidade de adquirir a oferta, otimizando assim os resultados das campanhas e tornando-as altamente lucrativas. <br>
+
 E em seguida, construir um **modelo de classificação** de acordo com os resultados obtidos no modelo inicial para fazer a segmentação dos futuros clientes da empresa.
 
 
@@ -17,15 +19,15 @@ E em seguida, construir um **modelo de classificação** de acordo com os result
 
 
 ## Metodologia 5W2H
-|**Questionamento** |**Descrição**|
-|---------|-------|
-|**What?**<br>O que? | ............................|
-|**Where?**<br>Onde? |............................|
-|**When?**<br>Quando? | ............................|
-|**Who?**<br>Quem? | ............................|
-|**Why?**<br>Por quê? | ............................|
-|**How?**<br>Como? | ............................|
-|**How Much?**<br>Quanto? | ............................|
+|**Questionamento**       |**Descrição**|
+|-------------------------|-------------|
+|**What?**<br>O que?      | A partir dos dados de uma campanha piloto, **construir um modelo para segmentação de clientes em campanhas de marketing** |
+|**Why?**<br>Por quê?     | O objetivo é que o modelo preveja o comportamento dos consumidores e torne possível aplicá-lo a toda a base de clientes, permitindo que a empresa selecione os clientes que têm maior probabilidade de adquirir a oferta, **otimizando assim os resultados das campanhas e tornando-as altamente lucrativas** |
+|**How?**<br>Como?        | O projeto será realizado através da **criação de modelos de clusterização e classificação para a segmentação de clientes** |
+|**Where?**<br>Onde?      | Em uma **empresa de delivery** |
+|**When?**<br>Quando?     | A data de início do projeto é **01/09/2024**, com um prazo estipulado para conclusão de **30 dias**. Dessa forma, a data prevista para conclusão do projeto é **30/09/2024** |
+|**Who?**<br>Quem?        | **Matheus Resende** - Cientista de Dados |
+|**How Much?**<br>Quanto? | O investimento estimado para o projeto é de **6.720MU** |
 
 
 ## Referências
