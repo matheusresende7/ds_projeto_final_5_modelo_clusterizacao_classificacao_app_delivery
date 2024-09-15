@@ -14,13 +14,11 @@ def libraries_versions():
         "Scikit-Learn": sklearn,
     }
 
-    print("Versões das bibliotecas:\n")
-    print(f"{'':-^20} | {'':-^10}")
+    print(f"Versão do Python: {python_version()}")
+    print()
+
     print(f"{'Biblioteca':^20} | {'Versão':^10}")
     print(f"{'':-^20} | {'':-^10}")
 
     for nome, biblioteca in sorted(bibliotecas.items()):
         print(f"{nome:<20} | {biblioteca.__version__:>10}")
-
-    print()
-    print(f"Versão do Python: {python_version()}")

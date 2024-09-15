@@ -1,9 +1,11 @@
- ## Projeto
+![Wallpaper](../images/illustrations/wallpaper.png)
+
+## Projeto
 Modelos de clusterização e classificação para segmentação de clientes em campanhas de marketing em uma plataforma de delivery
 
 
 ## Objetivo
-............................
+O objetivo do projeto é, a partir de uma campanha piloto, construir um **modelo de clusterização** para segmentação de clientes em campanhas de marketing em uma plataforma de delivery. De forma que o modelo preveja o comportamento dos clientes e torne possível aplicá-lo ao restante da base de clientes, permitindo à empresa selecionar os clientes que têm maior probabilidade de adquirir a oferta, visando ter campanhas de marketing altamente lucrativa. E em seguida, construir um **modelo de classificação** de acordo com os resultados obtidos no modelo inicial para fazer a segmentação dos futuros clientes da empresam, seguindo os mesmos propósitos.
 
 
 ## Descrição
@@ -22,17 +24,16 @@ Modelos de clusterização e classificação para segmentação de clientes em c
 |**How Much?**<br>Quanto? | ............................|
 
 
-## Fontes
-- Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere
-- Lorem ipsum dolor sit amet. Eum officia doloribus et cupiditate nisi et sunt voluptatem nam facere
+## Referências
+- **Repositório do desafio:** https://github.com/ifood/ifood-data-business-analyst-test
 
 
 ## Bibliotecas
-- **Pandas:** https://pandas.pydata.org/docs/index.html
-- **NumPy:** https://pandas.pydata.org/docs/index.html
 - **Matplotlib:** https://matplotlib.org/
+- **NumPy:** https://pandas.pydata.org/docs/index.html
+- **Pandas:** https://pandas.pydata.org/docs/index.html
+- **Scikit-Learn:** https://seaborn.pydata.org/
 - **Seaborn:** https://seaborn.pydata.org/
-- **Scikit Learning:** https://seaborn.pydata.org/
 
 
 ## Estrutura do Projeto
@@ -49,7 +50,7 @@ Modelos de clusterização e classificação para segmentação de clientes em c
     - `fn_libraries.py`: Arquivo de funções para importação das bibliotecas
     - `fn_stats.py`: Arquivos de funções para criar análises estatísticas recorrentes
 - **images/:** Pasta destinada a armazenar imagens do projeto
-    - **references/:** Pasta destinada a armazenar imagens de referência que foram utilizadas durante o projeto
+    - **illustrations/:** Pasta destinada a armazenar imagens de referência que foram utilizadas durante o projeto
     - **outputs/:** Pasta destinada a armazenar imagens geradas durante o projeto, como gráficos e visualizações
 - **models/:** Pasta destinada a armazenar os modelos criados durante o projeto
 - **notebooks/:** Pasta destinada a armazenar os notebooks de cada etapa do projeto de ciência de dados
@@ -68,6 +69,7 @@ Modelos de clusterização e classificação para segmentação de clientes em c
     - `consts.py`: Arquivo para a armazenar as constantes globais do projeto
     - `vars.py`: Arquivo para a armazenar as principais variáveis do projeto
 - **presentations/:** Pasta destinada a armazenar as apresentações do projeto, em PowerPoint e PDF
+- **references/:** Pasta destinada a armazenar arquivos com informações do projeto, como dicionário de dados, cronograma
 - **reports/:** Pasta destinada a armazenar relatórios criados durante o projeto, em HTML, pela biblioteca y data profiling
 - `.env`: Arquivo para armazenar as variáveis de ambiente sensíveis do projeto, como usuários, senhas, tokens e chaves de API
 - `.gitattributes`: Arquivo para configurar o repositório e omitir arquivos sem utilidades da versão final do projeto
@@ -83,11 +85,17 @@ Modelos de clusterização e classificação para segmentação de clientes em c
 - **03. Obtenção dos Dados – Data Sourcing:** Realiza a obtenção dos dados para o projeto
 - **04. Tratamento dos Dados – Data Cleaning:** Realiza o tratamento dos dados para eliminar qualquer tipo de anomalia, como dados vazios, duplicados, etc
 - **05. Análise Exploratória – Exploratory Data Analysis (EDA):** Faz a análise exploratória dos dados para um entendimento melhor do projeto
-- **06. Modelagem dos Dados – Feature Engineering: Realiza os ajustes necessários nos dados para que os algoritmos de machine learning possam ser aplicados
+- **06. Modelagem dos Dados – Feature Engineering:** Realiza os ajustes necessários nos dados para que os algoritmos de machine learning possam ser aplicados
 - **07. Seleção dos Modelos – Models Selection:** Seleciona os algoritmos de aprendizado de máquina que serão aplicados
 - **08. Treinamento dos Modelos – Models Training:** Realiza o treinamento dos modelos de aprendizado de máquina selecionados
 - **09. Validação do Modelo – Models Evaluation:** Faz a validação do modelo selecionado com base nos resultados das métricas de avaliação e define qual(is) modelo(s) será colocado em produção
 - **10. Deploy em Produção – Deployment:** Coloca o modelo definido em produção
 
 
+### Cronograma do Projeto - Gráfico de Gantt
+
+![Schedule](../images/outputs/schedule.png)
+
+
 ## Resultados
+...........................
