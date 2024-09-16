@@ -89,7 +89,7 @@ E em seguida, construir um **modelo de classificação** de acordo com os result
 - **01. Definição do desafio – Challenge:** Explica detalhadamente qual é o desafio que está se buscando resolver. Pode ser aplicado o método 5W2H
 - **02. Obtenção dos Dados – Data Sourcing:** Realiza a obtenção dos dados para o projeto
 - **03. Detalhamento do Projeto – Project Details:** Detalha e explica todas as informações dos datasets e gera um arquivo inicial de análise, y data profiling
-- **04. Tratamento dos Dados – Data Cleaning:** Realiza o tratamento dos dados para eliminar qualquer tipo de anomalia, como dados vazios, duplicados, etc
+- **04. Tratamento dos Dados – Data Processing:** Realiza o tratamento dos dados para eliminar qualquer tipo de anomalia, como dados vazios, duplicados, etc
 - **05. Análise Exploratória – Exploratory Data Analysis (EDA):** Faz a análise exploratória dos dados para um entendimento melhor do projeto
 - **06. Modelagem dos Dados – Feature Engineering:** Realiza os ajustes necessários nos dados para que os algoritmos de machine learning possam ser aplicados
 - **07. Seleção dos Modelos – Models Selection:** Seleciona os algoritmos de aprendizado de máquina que serão aplicados
