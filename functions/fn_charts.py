@@ -21,8 +21,10 @@ def boxplots( # Função para criar gráficos boxplot
         sns.boxplot( # Criando o boxplot
             y=column, # Passando a coluna de referência para criar o boxplot
             data=df, # Passando o dataframe para criar o boxplot
-            ax=axs[i] # Passando a posição do gráfico dentro da plotagem do matplotlib
+            ax=axs[i], # Passando a posição do gráfico dentro da plotagem do matplotlib
         )
+        axs[i].set_title(f'Boxplot - {column}', fontsize=12)  # Adiciona um título para cada boxplot
+        axs[i].set_ylabel('') # Removendo o título do eixo Y
 
     plt.show() # Exibindo os boxplots
 
