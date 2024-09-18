@@ -49,6 +49,11 @@ E em seguida, construir um **modelo de classificação** de acordo com os result
     - **processed/:** Pasta destinada a armazenar os datasets que já tiveram algum tratamento
     - **raw/:** Pasta destinada a armazenar os datasets brutos e que ainda não foram processados
 - **deploys/:** Pasta destinada a armazenar os deploys do projeto, em formatos ipynb, py, executável e Streamlit (.py)
+- **dictionaries/:** Pasta destinada a armazenar os dicionários do projeto
+    - `charts_dictionary.ipynb`: Arquivo para indicar o dicionário de gráficos
+    - `data_dictionary.ipynb`: Arquivo para indicar o dicionário de dados
+    - `datasets_dictionary.ipynb`: Arquivo para indicar o dicionário de datasets
+    - `stats_dictionary.ipynb`: Arquivo para indicar o dicionário de estatísticas
 - **docs/:** Pasta destinada a armazenar os arquivos e documentos referentes ao projeto
 - **functions/:** Pasta destinada a armazenar arquivos com as funções dos projetos de ciência de dados
     - `__init__.py`: Arquivo para indicar que a pasta é um pacote/biblioteca

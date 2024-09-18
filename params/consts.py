@@ -1,6 +1,7 @@
 # Data
 RAW_DATABASE = '../data/raw/raw_database.csv'
 PROCESSED_DATABASE = '../data/processed/processed_database.csv'
+LEAN_DATABASE = '../data/processed/lean_database.csv'
 
 # Images Illustrations
 WALLPAPER = '../images/illustrations/wallpaper.png'
