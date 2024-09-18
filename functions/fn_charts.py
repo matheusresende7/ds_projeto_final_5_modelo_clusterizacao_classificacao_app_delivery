@@ -1,3 +1,4 @@
+import math
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -15,7 +16,7 @@ def boxplots( # Função para criar gráficos boxplot
         nrows=1, # Definindo o número de linhas
         ncols=3, # Definindo o número de colunas
         figsize=(12,4), # Definindo o tamanho da figura
-        tight_layout=True # Definindo o layout dos gráficos
+        tight_layout=True # Definindo o layout mais justo dos gráficos
     )
 
     for i, column in enumerate(columns): # Criando uma estrutura de repetição para criar cada um dos boxplots
@@ -50,3 +51,47 @@ def pairplots( # Função para criar gráficos pairplots
         plot_kws=dict(alpha=alpha), # Definindo a transparência da plotagem dos gráficos
         corner=corner, # Definindo o pairplots apenas na parte espelhada inferior
     )
+
+
+
+def histplots( # Função para criar gráficos histplots
+    df, # Passando o df como parâmetro da função
+    hue = None, # Passando o hue como parâmetro da função
+    num_cols = 3, # Passando o número de colunas como parâmetro da função
+    alpha = 0.5, # Passando o alpha como parâmetro da função
+    kde=False, # Passando o kde como parâmetro da função
+):
+
+    num_cols = num_cols # Definindo o número de histogramas por linha, ou seja, as quantidade de colunas
+    total_columns = len(df.columns) # Definindo o total de colunas do dataset
+    num_rows = math.ceil(total_columns / num_cols) # Calculando quantas linhas serão necessárias
+
+    fig, axs = plt.subplots( # Criando a figura com os subplots
+        nrows=num_rows, # Passando o número de linhas da figura
+        ncols=num_cols, # Passando o número de colunas da figura
+        figsize=(20, 5*num_rows), # Definindo o tamanho da figura
+        tight_layout=True, # Definindo o layout mais justo dos gráficos
+    )
+
+    for i, column in enumerate(df.columns): # Criando a estrutura de repetição para criar os histplots
+        row = i // num_cols # Definindo o índice da linha
+        col = i % num_cols # Definindo o índice da coluna
+
+        sns.histplot( # Criando o histograma
+            data=df, # Passando o dataframe para criar o histplot
+            x=column, # Passando as colunas para criar o histplot
+            hue=hue, # Definindo o parâmetro hue (legenda)
+            alpha=alpha, # Definindo a transparência do gráfico
+            kde=kde, # Exibindo o KDE
+            ax=axs[row, col] # Posicionando o gráfico em seu devido subplot dentro da figura
+        )
+        axs[row, col].set_title(f'Histplot - {column}') # Adicionando título para cada subplot
+        axs[row, col].set_xlabel('') # Removendo título do eixo x
+        axs[row, col].set_ylabel('') # Removendo título do eixo y
+
+
+    if total_columns % num_cols != 0: # Removendo subplots vazios (se houver um número ímpar de colunas)
+        for subplot in range(total_columns, num_rows * num_cols): # Criando a estrutura de repetição para remover os subplots vazios (em um range do total de colunas até o último subplot previsto)
+            fig.delaxes(axs.flatten()[subplot]) # Removendo o subplot
+
+    plt.show() # Exibindo a figura com os gráficos
