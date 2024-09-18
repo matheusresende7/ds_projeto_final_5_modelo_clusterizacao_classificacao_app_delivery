@@ -5,6 +5,34 @@ import seaborn as sns
 
 
 
+# --------------------------------------------------GRÁFICOS INDIVIDUAIS---------------------------------------------------------------------
+
+
+
+def pairplots( # Função para criar gráficos pairplots
+    df, # Passando o df como parâmetro da função
+    columns, # Passando as colunas como parâmetro da função
+    hue = None, # Passando o hue como parâmetro da função
+    alpha = 0.5, # Passando o alpha como parâmetro da função
+    corner = True, # Passando o corner como parâmetro da função
+):
+    
+    analysis_columns = columns.copy() + [hue] # Adicionando a coluna hue as colunas que vão ser analisadas
+    
+    sns.pairplot( # Criando o gráfico pairplots
+        df[analysis_columns], # Passando as colunas que serão usadas nos pairplots
+        diag_kind="kde", # Definindo o tipo curva
+        hue=hue, # Definindo o parâmetro hue (legenda)
+        plot_kws=dict(alpha=alpha), # Definindo a transparência da plotagem dos gráficos
+        corner=corner, # Definindo o pairplots apenas na parte espelhada inferior
+    )
+
+
+
+# --------------------------------------------------LISTA DE GRÁFICOS------------------------------------------------------------------------
+
+
+
 def boxplots( # Função para criar gráficos boxplot
     df, # Passando o df como parâmetro da função
     columns, # Passando as colunas Y como parâmetro da função
@@ -34,26 +62,6 @@ def boxplots( # Função para criar gráficos boxplot
 
 
 
-def pairplots( # Função para criar gráficos pairplots
-    df, # Passando o df como parâmetro da função
-    columns, # Passando as colunas como parâmetro da função
-    hue = None, # Passando o hue como parâmetro da função
-    alpha = 0.5, # Passando o alpha como parâmetro da função
-    corner = True, # Passando o corner como parâmetro da função
-):
-    
-    analysis_columns = columns.copy() + [hue] # Adicionando a coluna hue as colunas que vão ser analisadas
-    
-    sns.pairplot( # Criando o gráfico pairplots
-        df[analysis_columns], # Passando as colunas que serão usadas nos pairplots
-        diag_kind="kde", # Definindo o tipo curva
-        hue=hue, # Definindo o parâmetro hue (legenda)
-        plot_kws=dict(alpha=alpha), # Definindo a transparência da plotagem dos gráficos
-        corner=corner, # Definindo o pairplots apenas na parte espelhada inferior
-    )
-
-
-
 def histplots( # Função para criar gráficos histplots
     df, # Passando o df como parâmetro da função
     hue = None, # Passando o hue como parâmetro da função
@@ -62,7 +70,7 @@ def histplots( # Função para criar gráficos histplots
     kde=False, # Passando o kde como parâmetro da função
 ):
 
-    num_cols = num_cols # Definindo o número de histogramas por linha, ou seja, as quantidade de colunas
+    num_cols = num_cols # Definindo o número de gráficos por linha, ou seja, as quantidade de colunas
     total_columns = len(df.columns) # Definindo o total de colunas do dataset
     num_rows = math.ceil(total_columns / num_cols) # Calculando quantas linhas serão necessárias
 
@@ -73,13 +81,13 @@ def histplots( # Função para criar gráficos histplots
         tight_layout=True, # Definindo o layout mais justo dos gráficos
     )
 
-    for i, column in enumerate(df.columns): # Criando a estrutura de repetição para criar os histplots
+    for i, column in enumerate(df.columns): # Criando a estrutura de repetição para criar os gráficos
         row = i // num_cols # Definindo o índice da linha
         col = i % num_cols # Definindo o índice da coluna
 
         sns.histplot( # Criando o histograma
-            data=df, # Passando o dataframe para criar o histplot
-            x=column, # Passando as colunas para criar o histplot
+            data=df, # Passando o dataframe para criar o gráfico
+            x=column, # Passando as colunas para criar o gráfico
             hue=hue, # Definindo o parâmetro hue (legenda)
             alpha=alpha, # Definindo a transparência do gráfico
             kde=kde, # Exibindo o KDE

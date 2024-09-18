@@ -1,0 +1,6 @@
+Tarefas pendentes:
+- 01_challenge e README: revisar todo os arquivos para deixar igual o resumo de ciência de dados em ppt (inclusive ajustar o próprio ppt)
+- 01_challenge e README: revisar a estrutura do projeto
+- 01_challenge e README: revisar as etapas do projeto
+- data_dictionary: atualizar o dicionário de dados de acordo com todos os datasets gerados durante o projeto
+- README: adicionar as informações mais relevantes do projeto

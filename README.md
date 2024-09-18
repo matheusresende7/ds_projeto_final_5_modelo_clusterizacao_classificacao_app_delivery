@@ -88,6 +88,7 @@ E em seguida, construir um **modelo de classificação** de acordo com os result
 - `LICENSE`: Arquivo com a licença do projeto
 - `README.md`: Arquivo para resumir e apresentar o projeto
 - `requirements.txt`: Arquivo para listar as dependências/bibliotecas necessárias no projeto
+- `to_do.txt`: Arquivo para anotar as tarefas pendentes do projeto
 
 
 ## Etapas do Projeto

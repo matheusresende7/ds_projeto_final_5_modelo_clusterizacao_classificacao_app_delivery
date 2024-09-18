@@ -1,7 +1,7 @@
 # Data
-RAW_DATABASE = '../data/raw/raw_database.csv'
-PROCESSED_DATABASE = '../data/processed/processed_database.csv'
-LEAN_DATABASE = '../data/processed/lean_database.csv'
+RAW_DATASET = '../data/raw/raw_dataset.csv'
+PROCESSED_DATASET = '../data/processed/processed_dataset.csv'
+LEAN_DATASET = '../data/processed/lean_dataset.csv'
 
 # Images Illustrations
 WALLPAPER = '../images/illustrations/wallpaper.png'
