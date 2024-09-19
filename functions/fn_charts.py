@@ -9,6 +9,30 @@ import seaborn as sns
 
 
 
+def boxplot( # Função para criar gráficos boxplot
+    dataframe, # Passando o dataframe como parâmetro da função
+    column, # Passando as colunas como parâmetro da função
+    hue_column = None, # Passando o hue como parâmetro da função
+):
+    
+    if isinstance(column, list) and len(column) == 1: # Verificando se a lista contém apenas 1 item, se tiver converter para string
+        column = str(column[0])
+    
+    ax = sns.boxplot( # Criando o boxplot
+        data=dataframe, # Passando o dataframe para criar o boxplot
+        x=hue_column, # Passando a coluna x que permite criar comparações em relação a alguma variável (geralmente categórica)
+        y=column, # Passando a coluna de referência para criar o boxplot
+        hue=hue_column, # Passando a hue column
+        showmeans=True, # Exibindo a média no boxplot, através de um triângulo verde
+    )
+    ax.set_title(f'Boxplot - {column}') # Adicionando título para cada subplot
+    ax.set_xlabel('') # Removendo título do eixo x
+    ax.set_ylabel('') # Removendo título do eixo y
+
+    plt.show() # Exibindo a figura com os gráficos
+
+
+
 def pairplots( # Função para criar gráficos pairplots
     df, # Passando o df como parâmetro da função
     columns, # Passando as colunas como parâmetro da função
@@ -33,45 +57,15 @@ def pairplots( # Função para criar gráficos pairplots
 
 
 
-def boxplots( # Função para criar gráficos boxplot
-    df, # Passando o df como parâmetro da função
-    columns, # Passando as colunas Y como parâmetro da função
-    x = None # Passando as colunas X como parâmetro da função
-): 
-    columns = columns # Passando as colunas que vão ser usadas para criar os boxplots
-
-    fig, axs = plt.subplots( # Criando a figura para colocar os gráficos de boxplots
-        nrows=1, # Definindo o número de linhas
-        ncols=3, # Definindo o número de colunas
-        figsize=(12,4), # Definindo o tamanho da figura
-        tight_layout=True # Definindo o layout mais justo dos gráficos
-    )
-
-    for i, column in enumerate(columns): # Criando uma estrutura de repetição para criar cada um dos boxplots
-        sns.boxplot( # Criando o boxplot
-            x=x, # Passando a coluna x que permite criar comparações em relação a alguma variável (geralmente categórica)
-            y=column, # Passando a coluna de referência para criar o boxplot
-            data=df, # Passando o dataframe para criar o boxplot
-            ax=axs[i], # Passando a posição do gráfico dentro da plotagem do matplotlib
-            showmeans=True, # Exibindo a média no boxplot, através de um triângulo verde
-        )
-        axs[i].set_title(f'Boxplot - {column}', fontsize=12)  # Adiciona um título para cada boxplot
-        axs[i].set_ylabel('') # Removendo o título do eixo Y
-
-    plt.show() # Exibindo os boxplots
-
-
-
-def histplots( # Função para criar gráficos histplots
-    df, # Passando o df como parâmetro da função
-    hue = None, # Passando o hue como parâmetro da função
+def boxplots( # Função para criar listas de gráficos boxplots
+    dataframe, # Passando o dataframe como parâmetro da função
+    columns, # Passando as colunas como parâmetro da função
+    hue_column = None, # Passando o hue como parâmetro da função
     num_cols = 3, # Passando o número de colunas como parâmetro da função
-    alpha = 0.5, # Passando o alpha como parâmetro da função
-    kde=False, # Passando o kde como parâmetro da função
 ):
 
     num_cols = num_cols # Definindo o número de gráficos por linha, ou seja, as quantidade de colunas
-    total_columns = len(df.columns) # Definindo o total de colunas do dataset
+    total_columns = len(columns) # Definindo o total de colunas do dataset
     num_rows = math.ceil(total_columns / num_cols) # Calculando quantas linhas serão necessárias
 
     fig, axs = plt.subplots( # Criando a figura com os subplots
@@ -81,25 +75,84 @@ def histplots( # Função para criar gráficos histplots
         tight_layout=True, # Definindo o layout mais justo dos gráficos
     )
 
-    for i, column in enumerate(df.columns): # Criando a estrutura de repetição para criar os gráficos
+    if total_columns == 1: # Se houver apenas um gráfico, axs é um único objeto, então convertemos para uma lista para indexar uniformemente
+        axs = [axs]
+    elif num_rows == 1: # Se só há uma linha de gráficos, achatamos o array para 1D
+        axs = axs.flatten() 
+
+    axs = axs.flatten() if num_rows > 1 else axs # Garantindo que axs seja sempre 1D
+
+    for i, column in enumerate(columns): # Criando a estrutura de repetição para criar os gráficos
         row = i // num_cols # Definindo o índice da linha
         col = i % num_cols # Definindo o índice da coluna
 
-        sns.histplot( # Criando o histograma
-            data=df, # Passando o dataframe para criar o gráfico
-            x=column, # Passando as colunas para criar o gráfico
-            hue=hue, # Definindo o parâmetro hue (legenda)
-            alpha=alpha, # Definindo a transparência do gráfico
-            kde=kde, # Exibindo o KDE
-            ax=axs[row, col] # Posicionando o gráfico em seu devido subplot dentro da figura
+        sns.boxplot( # Criando o boxplot
+            data=dataframe, # Passando o dataframe para criar o boxplot
+            x=hue_column, # Passando a coluna x que permite criar comparações em relação a alguma variável (geralmente categórica)
+            y=column, # Passando a coluna de referência para criar o boxplot
+            hue=hue_column, # Passando a hue column
+            ax=axs[i], # Passando a posição do gráfico dentro da plotagem do matplotlib
+            showmeans=True, # Exibindo a média no boxplot, através de um triângulo verde
         )
-        axs[row, col].set_title(f'Histplot - {column}') # Adicionando título para cada subplot
-        axs[row, col].set_xlabel('') # Removendo título do eixo x
-        axs[row, col].set_ylabel('') # Removendo título do eixo y
+        axs[i].set_title(f'Boxplot - {column}') # Adicionando título para cada subplot
+        axs[i].set_xlabel('') # Removendo título do eixo x
+        axs[i].set_ylabel('') # Removendo título do eixo y
 
 
     if total_columns % num_cols != 0: # Removendo subplots vazios (se houver um número ímpar de colunas)
         for subplot in range(total_columns, num_rows * num_cols): # Criando a estrutura de repetição para remover os subplots vazios (em um range do total de colunas até o último subplot previsto)
-            fig.delaxes(axs.flatten()[subplot]) # Removendo o subplot
+            fig.delaxes(axs[subplot]) # Removendo o subplot
+
+    plt.show() # Exibindo a figura com os gráficos
+
+
+
+def histplots( # Função para criar listas de gráficos histplots
+    dataframe, # Passando o dataframe como parâmetro da função
+    columns, # Passando as colunas como parâmetro da função
+    hue_column = None, # Passando o hue como parâmetro da função
+    num_cols = 3, # Passando o número de colunas como parâmetro da função
+    alpha = 0.5, # Passando o alpha como parâmetro da função
+    kde=False, # Passando o kde como parâmetro da função
+):
+
+    num_cols = num_cols # Definindo o número de gráficos por linha, ou seja, as quantidade de colunas
+    total_columns = len(columns) # Definindo o total de colunas do dataset
+    num_rows = math.ceil(total_columns / num_cols) # Calculando quantas linhas serão necessárias
+
+    fig, axs = plt.subplots( # Criando a figura com os subplots
+        nrows=num_rows, # Passando o número de linhas da figura
+        ncols=num_cols, # Passando o número de colunas da figura
+        figsize=(20, 5*num_rows), # Definindo o tamanho da figura
+        tight_layout=True, # Definindo o layout mais justo dos gráficos
+    )
+
+    if total_columns == 1: # Se houver apenas um gráfico, axs é um único objeto, então convertemos para uma lista para indexar uniformemente
+        axs = [axs]
+    elif num_rows == 1: # Se só há uma linha de gráficos, achatamos o array para 1D
+        axs = axs.flatten() 
+
+    axs = axs.flatten() if num_rows > 1 else axs # Garantindo que axs seja sempre 1D
+
+    for i, column in enumerate(columns): # Criando a estrutura de repetição para criar os gráficos
+        row = i // num_cols # Definindo o índice da linha
+        col = i % num_cols # Definindo o índice da coluna
+
+        sns.histplot( # Criando o histograma
+            data=dataframe, # Passando o dataframe para criar o gráfico
+            x=column, # Passando as colunas para criar o gráfico
+            hue=hue_column, # Definindo o parâmetro hue (legenda)
+            kde=kde, # Exibindo o KDE
+            alpha=alpha, # Definindo a transparência do gráfico
+            ax=axs[i] # Posicionando o gráfico em seu devido subplot dentro da figura
+        )
+        axs[i].set_title(f'Histplot - {column}') # Adicionando título para cada subplot
+        axs[i].set_xlabel('') # Removendo título do eixo x
+        axs[i].set_ylabel('') # Removendo título do eixo y
+
+
+    if total_columns % num_cols != 0: # Removendo subplots vazios (se houver um número ímpar de colunas)
+        for subplot in range(total_columns, num_rows * num_cols): # Criando a estrutura de repetição para remover os subplots vazios (em um range do total de colunas até o último subplot previsto)
+            fig.delaxes(axs[subplot]) # Removendo o subplot
 
     plt.show() # Exibindo a figura com os gráficos

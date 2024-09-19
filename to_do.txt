@@ -2,5 +2,10 @@ Tarefas pendentes:
 - 01_challenge e README: revisar todo os arquivos para deixar igual o resumo de ciência de dados em ppt (inclusive ajustar o próprio ppt)
 - 01_challenge e README: revisar a estrutura do projeto
 - 01_challenge e README: revisar as etapas do projeto
+- 01_challenge, README e resumo ppt: adicionar na pasta references os arquivos que são usados lá: markdown_tables (usar o chatpgpt para
+    converter tabelas do excel em tabelas markdown para colocar no projeto), schedule
 - data_dictionary: atualizar o dicionário de dados de acordo com todos os datasets gerados durante o projeto
 - README: adicionar as informações mais relevantes do projeto
+- markdown_tables: adicionar todas as tabelas que criei no projeto nesse arquivo em excel, para otimizar a criação de tabelas em markdown, 
+    fazendo a criação delas através de criar no excel por ser muito mais fácil e pedir pro chatgpt converter em uma tabela markdown
+- salvar os principais gráficos gerados no estudo para colocar na apresentação no final do projeto
