@@ -2,6 +2,8 @@ import math
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from matplotlib.colors import CenteredNorm, ListedColormap
+from matplotlib.cm import ScalarMappable
 
 
 
@@ -26,8 +28,8 @@ def boxplot( # Função para criar gráficos boxplot
         showmeans=True, # Exibindo a média no boxplot, através de um triângulo verde
     )
     ax.set_title(f'Boxplot - {column}') # Adicionando título para cada subplot
-    ax.set_xlabel('') # Removendo título do eixo x
-    ax.set_ylabel('') # Removendo título do eixo y
+    ax.set_xlabel('') # Removendo o título do eixo x
+    ax.set_ylabel('') # Removendo o título do eixo y
 
     plt.show() # Exibindo a figura com os gráficos
 
@@ -55,6 +57,42 @@ def heatmap( # Função para criar gráfico heatmap
 
     colorbar = ax.collections[0].colorbar # Armazenando em uma variável a barra de cores
     colorbar.ax.tick_params(labelsize=6) # Ajustando a fonte da barra de cores
+
+    plt.show() # Exibindo a figura com o gráfico
+
+
+
+def barplot( # Função para criar gráfico barplot
+    dataframe, # Passando o dataframe como parâmetro da função
+    column, # Passando a column como parâmetro da função
+    halfrange, # Passando o halfrange como parâmetro da função
+    title = None, # Passando o title como parâmetro da função
+):
+    
+    cmap = 'coolwarm_r' # Definindo a paleta de cores
+    cnorm = CenteredNorm(
+        vcenter=0, # Definindo o centro do gráfico
+        halfrange=halfrange # Definindo o máximo de valores do gráfico
+    )
+    smap = ScalarMappable(norm=cnorm, cmap=cmap) # Criando uma mapa de cores
+
+    listed_colors = ListedColormap([smap.to_rgba(x) for x in column]).colors # Armazenando o gradiente de cores em uma variável
+    
+    fig, ax = plt.subplots( # Criando a figura
+        figsize=(14,4) # Definindo o tamanho da figura
+    )
+
+    b = sns.barplot( # Criando o gráfico
+        x=dataframe.index, # Definindo o valor de x
+        y=column, # Definindo o valor de y
+        hue=dataframe.index, # Definindo o valor de hue
+        palette=listed_colors, # Definindo a paleta de cores
+        legend=False, # Desligando a legenda
+    )
+    b.tick_params(axis='x', rotation=90) # Girando os títulos do eixo x em 90°
+    b.set_title(f'Barplot - {title}') # Definindo o título
+    b.set_xlabel('') # Removendo o título do eixo x
+    b.set_ylabel('Correlation') # Definindo o título do eixo y
 
     plt.show() # Exibindo a figura com o gráfico
 
