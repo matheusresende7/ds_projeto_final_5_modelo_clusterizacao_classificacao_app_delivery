@@ -33,23 +33,30 @@ def boxplot( # Função para criar gráficos boxplot
 
 
 
-def pairplots( # Função para criar gráficos pairplots
-    df, # Passando o df como parâmetro da função
-    columns, # Passando as colunas como parâmetro da função
-    hue = None, # Passando o hue como parâmetro da função
-    alpha = 0.5, # Passando o alpha como parâmetro da função
-    corner = True, # Passando o corner como parâmetro da função
+def heatmap( # Função para criar gráfico heatmap
+    dataframe, # Passando o dataframe como parâmetro da função
 ):
     
-    analysis_columns = columns.copy() + [hue] # Adicionando a coluna hue as colunas que vão ser analisadas
-    
-    sns.pairplot( # Criando o gráfico pairplots
-        df[analysis_columns], # Passando as colunas que serão usadas nos pairplots
-        diag_kind="kde", # Definindo o tipo curva
-        hue=hue, # Definindo o parâmetro hue (legenda)
-        plot_kws=dict(alpha=alpha), # Definindo a transparência da plotagem dos gráficos
-        corner=corner, # Definindo o pairplots apenas na parte espelhada inferior
+    fig, ax = plt.subplots( # Criando a figura
+        figsize=(8,8) # Definindo o tamanho da figura
     )
+
+    sns.heatmap( # Criando o heatmap
+        dataframe, # Passando o dataframe para o heatmap
+        annot=True, # Exibindo o valores no gráfico
+        ax=ax, # Posicionando o gráfico na figura
+        fmt='.1f', # Definindo o formato dos valores do gráfico
+        cmap='coolwarm_r', # Definindo a escala de cores
+        annot_kws={"size": 6}, # Definindo a fonte dos textos no gráfico
+    )
+    ax.set_title('Heatmap') # Adicionando título para o gráfico
+    ax.set_xticklabels(ax.get_xticklabels(), fontsize=6) # Ajustando a fonte dos títulos do eixo x
+    ax.set_yticklabels(ax.get_yticklabels(), fontsize=6) # Ajustando a fonte dos títulos do eixo y
+
+    colorbar = ax.collections[0].colorbar # Armazenando em uma variável a barra de cores
+    colorbar.ax.tick_params(labelsize=6) # Ajustando a fonte da barra de cores
+
+    plt.show() # Exibindo a figura com o gráfico
 
 
 

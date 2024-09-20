@@ -2,6 +2,7 @@
 RAW_DATASET = '../data/raw/raw_dataset.csv'
 PROCESSED_DATASET = '../data/processed/processed_dataset.csv'
 LEAN_DATASET = '../data/processed/lean_dataset.csv'
+DUMMIES_DATASET = '../data/processed/dummies_dataset.csv'
 
 # Images Illustrations
 WALLPAPER = '../images/illustrations/wallpaper.png'
