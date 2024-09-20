@@ -10,3 +10,5 @@ Tarefas pendentes:
 - markdown_tables: adicionar todas as tabelas que criei no projeto nesse arquivo em excel, para otimizar a criação de tabelas em markdown, 
     fazendo a criação delas através de criar no excel por ser muito mais fácil e pedir pro chatgpt converter em uma tabela markdown
 - salvar os principais gráficos gerados no estudo para colocar na apresentação no final do projeto
+- fazer uma apresentação da parte de eda
+- fazer uma apresentação da parte dos modelos
