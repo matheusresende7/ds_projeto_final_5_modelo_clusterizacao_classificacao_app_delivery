@@ -1,9 +1,20 @@
+import os
+import sys
+sys.path.append('..')
 import math
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import seaborn as sns
 from matplotlib.colors import CenteredNorm, ListedColormap
 from matplotlib.cm import ScalarMappable
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+import params.consts as consts
+
+
+
+os.environ["OMP_NUM_THREADS"] = "9" # Alterando essa variável de ambiente para evitar erros equivocados
 
 
 
@@ -201,5 +212,54 @@ def histplots( # Função para criar listas de gráficos histplots
     if total_columns % num_cols != 0: # Removendo subplots vazios (se houver um número ímpar de colunas)
         for subplot in range(total_columns, num_rows * num_cols): # Criando a estrutura de repetição para remover os subplots vazios (em um range do total de colunas até o último subplot previsto)
             fig.delaxes(axs[subplot]) # Removendo o subplot
+
+    plt.show() # Exibindo a figura com os gráficos
+
+
+
+def elbow_silhouette( # Função para criar os gráficos de Elbow Method e Silhouette Method
+    dataframe, # Passando o dataframe como parâmetro da função
+    range_k=(2, 11), # Passando o range de intervalos de clusters como parâmetro da função (vai de 2 a 10, pois 11 é exclusive)
+):
+
+    fig, axs = plt.subplots( # Criando a figura com os subplots
+        nrows=1, # Passando o número de linhas da figura
+        ncols=2, # Passando o número de colunas da figura
+        figsize=(15, 5), # Definindo o tamanho da figura
+        tight_layout=True # Definindo o layout mais justo dos gráficos
+    )
+
+    elbow = {} # Criando um dicionário para armazenar os valores de inércia (usados no Método do Cotovelo) para cada valor de K
+    silhouette = [] # Criando uma lista para armazenar os valores da pontuação de silhueta para cada valor de K
+
+    k_range = range(*range_k) # Descompactando o range
+
+    for value in k_range: # Criando uma estrutura de repetição para percorrer cada valor de K e criar um modelo K-Means
+        kmeans = KMeans( # Criando um modelo K-Means para cada valor de K
+            n_clusters=value, # Passando o valor de K
+            random_state=consts.RANDOM_STATE, # Definindo o random state
+            n_init=10 # Definindo a quantidade de vezes que o algoritmo será executado
+        )
+        kmeans.fit(dataframe) # Ajustando o modelo aos dados
+        elbow[value] = kmeans.inertia_ # Calculando e armazenado a inércia
+
+        labels = kmeans.labels_ # Armazenando os valores de kmeans em uma variável
+        silhouette.append(silhouette_score(dataframe, labels)) # Calculando o valor da silhueta
+
+    sns.lineplot( # Criando o gráfico de Elbow Method
+        x=list(elbow.keys()), # Passando os valores de X
+        y=list(elbow.values()), # Passando os valores de Y
+        ax=axs[0] # Passando a posição do gráfico na figura
+    )
+    axs[0].set_xlabel("Inertia") # Definindo o título do gráfico na posição 0
+    axs[0].set_title("Elbow Method") # Definindo o título do eixo X na posição 0
+
+    sns.lineplot( # Criando o gráfico de Silhouette Method
+        x=list(k_range), # Passando os valores de X
+        y=silhouette, # Passando os valores de Y
+        ax=axs[1] # Passando a posição do gráfico na figura
+    )
+    axs[1].set_xlabel("Silhouette Score") # Definindo o título do eixo X na posição 0
+    axs[1].set_title("Silhouette Method") # Definindo o título do gráfico na posição 1
 
     plt.show() # Exibindo a figura com os gráficos

@@ -3,6 +3,8 @@ RAW_DATASET = '../data/raw/raw_dataset.csv'
 PROCESSED_DATASET = '../data/processed/processed_dataset.csv'
 LEAN_DATASET = '../data/processed/lean_dataset.csv'
 DUMMIES_DATASET = '../data/processed/dummies_dataset.csv'
+TRANSFORMED_DATASET = '../data/processed/transformed_dataset.csv'
+CLUSTERED_DATASET = '../data/processed/clustered_dataset.csv'
 
 # Images Illustrations
 WALLPAPER = '../images/illustrations/wallpaper.png'
@@ -44,6 +46,7 @@ ONE_HOT_ENCODER = '../images/illustrations/one_hot_encoder.png'
 STANDARD_SCALER = '../images/illustrations/standard_scaler.png'
 POWER_TRANSFORMATION = '../images/illustrations/power_transformation.png'
 MIN_MAX_SCALER = '../images/illustrations/min_max_scaler.png'
+PCA = '../images/illustrations/pca.png'
 
 # Images Outputs
 SCHEDULE = '../images/outputs/schedule.png'

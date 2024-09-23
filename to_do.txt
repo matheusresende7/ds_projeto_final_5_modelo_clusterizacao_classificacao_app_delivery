@@ -13,6 +13,7 @@ Tarefas pendentes:
 - fazer uma apresentação da parte de eda (usar modelos do curso de ppt da hashtag)
 - fazer uma apresentação da parte dos modelos (usar modelos do curso de ppt da hashtag)
 - revisar todo o conhecimento que coloquei no projeto e passar para o slide de resumo também
+- revisar toda a distribuição de pastas e arquivos do projeto, para ver quais fazem sentido e quais não fazem
 - TRATAR O OVERFITTING NO PROJETO
 
 
