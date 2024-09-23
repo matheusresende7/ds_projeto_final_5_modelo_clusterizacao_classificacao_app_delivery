@@ -37,6 +37,7 @@ def boxplot( # Função para criar gráficos boxplot
         y=column, # Passando a coluna de referência para criar o boxplot
         hue=hue_column, # Passando a hue column
         showmeans=True, # Exibindo a média no boxplot, através de um triângulo verde
+        palette='tab10' if hue_column else None, # Usando a paleta de cores tab10 caso seja passada um hue_column
     )
     ax.set_title(f'Boxplot - {column}') # Adicionando título para cada subplot
     ax.set_xlabel('') # Removendo o título do eixo x
@@ -261,6 +262,7 @@ def boxplots( # Função para criar listas de gráficos boxplots
             hue=hue_column, # Passando a hue column
             ax=axs[i], # Passando a posição do gráfico dentro da plotagem do matplotlib
             showmeans=True, # Exibindo a média no boxplot, através de um triângulo verde
+            palette='tab10' if hue_column else None, # Usando a paleta de cores tab10 caso seja passada um hue_column
         )
         axs[i].set_title(f'Boxplot - {column}') # Adicionando título para cada subplot
         axs[i].set_xlabel('') # Removendo título do eixo x
@@ -313,7 +315,8 @@ def histplots( # Função para criar listas de gráficos histplots
             hue=hue_column, # Definindo o parâmetro hue (legenda)
             kde=kde, # Exibindo o KDE
             alpha=alpha, # Definindo a transparência do gráfico
-            ax=axs[i] # Posicionando o gráfico em seu devido subplot dentro da figura
+            ax=axs[i], # Posicionando o gráfico em seu devido subplot dentro da figura
+            palette='tab10' if hue_column else None, # Usando a paleta de cores tab10 caso seja passada um hue_column
         )
         axs[i].set_title(f'Histplot - {column}') # Adicionando título para cada subplot
         axs[i].set_xlabel('') # Removendo título do eixo x
