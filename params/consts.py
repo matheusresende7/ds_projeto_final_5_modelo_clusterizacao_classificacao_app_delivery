@@ -40,6 +40,10 @@ XGBOOST_REGRESSOR = '../images/illustrations/xgboost_regressor.png'
 K_MEANS = '../images/illustrations/k_means.png'
 MEAN_SHIFT = '../images/illustrations/mean_shift.png'
 DBSCAN = '../images/illustrations/dbscan.png'
+ONE_HOT_ENCODER = '../images/illustrations/one_hot_encoder.png'
+STANDARD_SCALER = '../images/illustrations/standard_scaler.png'
+POWER_TRANSFORMATION = '../images/illustrations/power_transformation.png'
+MIN_MAX_SCALER = '../images/illustrations/min_max_scaler.png'
 
 # Images Outputs
 SCHEDULE = '../images/outputs/schedule.png'

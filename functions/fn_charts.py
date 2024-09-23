@@ -107,6 +107,7 @@ def boxplots( # Função para criar listas de gráficos boxplots
     columns, # Passando as colunas como parâmetro da função
     hue_column = None, # Passando o hue como parâmetro da função
     num_cols = 3, # Passando o número de colunas como parâmetro da função
+    height_figsize = 5, # Passando a altura do figsize como parâmetro da função
 ):
 
     num_cols = num_cols # Definindo o número de gráficos por linha, ou seja, as quantidade de colunas
@@ -116,7 +117,7 @@ def boxplots( # Função para criar listas de gráficos boxplots
     fig, axs = plt.subplots( # Criando a figura com os subplots
         nrows=num_rows, # Passando o número de linhas da figura
         ncols=num_cols, # Passando o número de colunas da figura
-        figsize=(20, 5*num_rows), # Definindo o tamanho da figura
+        figsize=(20, height_figsize*num_rows), # Definindo o tamanho da figura
         tight_layout=True, # Definindo o layout mais justo dos gráficos
     )
 
@@ -157,6 +158,7 @@ def histplots( # Função para criar listas de gráficos histplots
     columns, # Passando as colunas como parâmetro da função
     hue_column = None, # Passando o hue como parâmetro da função
     num_cols = 3, # Passando o número de colunas como parâmetro da função
+    height_figsize = 5, # Passando a altura do figsize como parâmetro da função
     alpha = 0.5, # Passando o alpha como parâmetro da função
     kde=False, # Passando o kde como parâmetro da função
 ):
@@ -168,7 +170,7 @@ def histplots( # Função para criar listas de gráficos histplots
     fig, axs = plt.subplots( # Criando a figura com os subplots
         nrows=num_rows, # Passando o número de linhas da figura
         ncols=num_cols, # Passando o número de colunas da figura
-        figsize=(20, 5*num_rows), # Definindo o tamanho da figura
+        figsize=(20, height_figsize*num_rows), # Definindo o tamanho da figura
         tight_layout=True, # Definindo o layout mais justo dos gráficos
     )
 
