@@ -47,6 +47,8 @@ STANDARD_SCALER = '../images/illustrations/standard_scaler.png'
 POWER_TRANSFORMATION = '../images/illustrations/power_transformation.png'
 MIN_MAX_SCALER = '../images/illustrations/min_max_scaler.png'
 PCA = '../images/illustrations/pca.png'
+ROS = '../images/illustrations/ros.png'
+RUS = '../images/illustrations/rus.png'
 
 # Images Outputs
 SCHEDULE = '../images/outputs/schedule.png'
