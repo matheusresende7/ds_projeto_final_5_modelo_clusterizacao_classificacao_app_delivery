@@ -64,5 +64,9 @@ SCHEDULE = '../images/outputs/schedule.png'
 EDA_0 = '../reports/eda_0.html'
 EDA_1 = '../reports/eda_1.html'
 
+# Models
+MODEL_CLASSIFICATION_JOBLIB = '../models/model_classification.joblib'
+MODEL_CLASSIFICATION_PKL = '../models/model_classification.pkl'
+
 # Values
 RANDOM_STATE = 42
