@@ -1,10 +1,11 @@
 # Data
-RAW_DATASET = '../data/raw/raw_dataset.csv'
-PROCESSED_DATASET = '../data/processed/processed_dataset.csv'
-LEAN_DATASET = '../data/processed/lean_dataset.csv'
-DUMMIES_DATASET = '../data/processed/dummies_dataset.csv'
-TRANSFORMED_DATASET = '../data/processed/transformed_dataset.csv'
-CLUSTERED_DATASET = '../data/processed/clustered_dataset.csv'
+DATASET_RAW = '../data/dataset_raw.csv'
+DATASET_PROCESSED = '../data/dataset_processed.csv'
+DATASET_LEAN = '../data/dataset_lean.csv'
+DATASET_DUMMIES = '../data/dataset_dummies.csv'
+DATASET_TRANSFORMED = '../data/dataset_transformed.csv'
+DATASET_CLUSTERED = '../data/dataset_clustered.csv'
+DATASET_DEPLOY = '../data/dataset_deploy.csv'
 
 # Images Illustrations
 WALLPAPER = '../images/illustrations/wallpaper.png'
