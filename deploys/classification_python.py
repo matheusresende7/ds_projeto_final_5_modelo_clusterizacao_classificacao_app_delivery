@@ -11,6 +11,6 @@ df = pd.read_csv(consts.DATASET_DEPLOY_CLASSIFICATION, sep=';') # Lendo o datase
 
 predictions = model_classification.predict(df) # Fazendo as previsões com o modelo
 
-df['Cluster'] = predictions # Criando uma coluna para armazenar as previsões
+df['Response'] = predictions # Criando uma coluna para armazenar as previsões
 
 df.to_csv(consts.DATASET_DEPLOYED_CLASSIFICATION, index=False) # Salvando o dataset com as previsões
