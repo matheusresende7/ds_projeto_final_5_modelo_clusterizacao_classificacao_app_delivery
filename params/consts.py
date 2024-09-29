@@ -5,8 +5,16 @@ DATASET_LEAN = '../data/dataset_lean.csv'
 DATASET_DUMMIES = '../data/dataset_dummies.csv'
 DATASET_TRANSFORMED = '../data/dataset_transformed.csv'
 DATASET_CLUSTERED = '../data/dataset_clustered.csv'
-DATASET_DEPLOY = '../data/dataset_deploy.csv'
-DATASET_DEPLOYED = '../data/dataset_deployed.csv'
+DATASET_DEPLOY_CLASSIFICATION = '../data/dataset_deploy_classification.csv'
+DATASET_DEPLOYED_CLASSIFICATION = '../data/dataset_deployed_classification.csv'
+
+# Models
+MODEL_CLASSIFICATION_JOBLIB = '../models/model_classification.joblib'
+MODEL_CLASSIFICATION_PKL = '../models/model_classification.pkl'
+
+# Reports
+EDA_0 = '../reports/eda_0.html'
+EDA_1 = '../reports/eda_1.html'
 
 # Images Illustrations
 WALLPAPER = '../images/illustrations/wallpaper.png'
@@ -61,14 +69,6 @@ GRID_SEARCH = '../images/illustrations/grid_search.png'
 
 # Images Outputs
 SCHEDULE = '../images/outputs/schedule.png'
-
-# Reports
-EDA_0 = '../reports/eda_0.html'
-EDA_1 = '../reports/eda_1.html'
-
-# Models
-MODEL_CLASSIFICATION_JOBLIB = '../models/model_classification.joblib'
-MODEL_CLASSIFICATION_PKL = '../models/model_classification.pkl'
 
 # Values
 RANDOM_STATE = 42

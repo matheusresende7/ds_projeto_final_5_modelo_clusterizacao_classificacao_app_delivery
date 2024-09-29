@@ -17,6 +17,7 @@ Tarefas pendentes:
 - revisar os textos explicativos do projeto, já que o modelo de classificação é para classificar se os clientes vão aceitar a 6 campanha e não
     para reclassificar os clusters dos clientes futuros (apesar disso fazer total sentido. e quem sabe não faço essa parte também?)
 - TRATAR O OVERFITTING NO PROJETO
+- atualizar o cv após finalizar esse projeto
 
 
 

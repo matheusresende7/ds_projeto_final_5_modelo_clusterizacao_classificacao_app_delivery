@@ -5,9 +5,9 @@ import params.consts as consts
 import joblib as jb
 import streamlit as st
 
-model_classification = jb.load(consts.MODEL_CLASSIFICATION_JOBLIB)
+model_classification = jb.load(consts.MODEL_CLASSIFICATION_JOBLIB) # Carregando o modelo
 
-st.title('Prevendo a resposta da 6ª campanha')
+st.title('Prevendo a resposta da 6ª campanha') 
 
 Education = st.selectbox('Escolaridade', ['Graduation', 'PhD', 'Master', 'Basic', '2n Cycle'], index=None, placeholder='Selecione uma opção...',)
 Marital_Status = st.selectbox('Estado Civil', ['Single', 'Partner'], index=None, placeholder='Selecione uma opção...',)
@@ -61,9 +61,9 @@ if button:
         # Prevendo a resposta
         prediction = model_classification.predict(data)
         if prediction == 1:
-            st.success('Esse cliente deve aceitar a 6ª campanha.')
+            st.success('Esse cliente DEVE aceitar a 6ª campanha.')
         elif prediction == 0:
-            st.success('Esse cliente não deve aceitar a 6ª campanha.')
+            st.success('Esse cliente NÃO DEVE aceitar a 6ª campanha.')
 
     except Exception as error:
         st.error(f'Ocorreu o seguinte erro durante a previsão: {error}.')
