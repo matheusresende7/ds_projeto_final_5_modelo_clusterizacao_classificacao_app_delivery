@@ -6,6 +6,7 @@ DATASET_DUMMIES = '../data/dataset_dummies.csv'
 DATASET_TRANSFORMED = '../data/dataset_transformed.csv'
 DATASET_CLUSTERED = '../data/dataset_clustered.csv'
 DATASET_DEPLOY = '../data/dataset_deploy.csv'
+DATASET_DEPLOYED = '../data/dataset_deployed.csv'
 
 # Images Illustrations
 WALLPAPER = '../images/illustrations/wallpaper.png'

@@ -1,0 +1,16 @@
+# Importando as bibliotecas
+import sys
+sys.path.append('..')
+import pandas as pd
+import params.consts as consts
+import joblib
+
+model_classification = joblib.load(consts.MODEL_CLASSIFICATION_JOBLIB) # Carregando o modelo 
+
+df = pd.read_csv(consts.DATASET_DEPLOY, sep=';') # Lendo o dataset a ser previsto
+
+predictions = model_classification.predict(df) # Fazendo as previsões com o modelo
+
+df['Cluster'] = predictions # Criando uma coluna para armazenar as previsões
+
+df.to_csv(consts.DATASET_DEPLOYED, index=False) # Salvando o dataset com as previsões
