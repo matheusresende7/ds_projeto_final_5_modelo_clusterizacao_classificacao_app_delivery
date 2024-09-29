@@ -3,9 +3,9 @@ import sys
 sys.path.append('..')
 import pandas as pd
 import params.consts as consts
-import joblib
+import joblib as jb
 
-model_classification = joblib.load(consts.MODEL_CLASSIFICATION_JOBLIB) # Carregando o modelo 
+model_classification = jb.load(consts.MODEL_CLASSIFICATION_JOBLIB) # Carregando o modelo 
 
 df = pd.read_csv(consts.DATASET_DEPLOY, sep=';') # Lendo o dataset a ser previsto
 
