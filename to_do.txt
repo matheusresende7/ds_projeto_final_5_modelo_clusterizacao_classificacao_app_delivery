@@ -1,16 +1,6 @@
 Tarefas pendentes:
-- 01_challenge e README: revisar todo os arquivos para deixar igual o resumo de ciência de dados em ppt (inclusive ajustar o próprio ppt)
-- data_dictionary: atualizar o dicionário de dados de acordo com todos os datasets gerados durante o projeto
-- datasets_dictionary: atualizar o dicionário de datasets de acordo com todos os datasets gerados durante o projeto
-- README: adicionar as informações mais relevantes do projeto
-- markdown_tables: adicionar todas as tabelas que criei no projeto nesse arquivo em excel, para otimizar a criação de tabelas em markdown, 
-    fazendo a criação delas através de criar no excel por ser muito mais fácil e pedir pro chatgpt converter em uma tabela markdown
+- README: adicionar as informações mais relevantes do projeto, incluindo os resultados obtidos
 - salvar os principais gráficos gerados no estudo para colocar na apresentação no final do projeto
 - fazer uma apresentação da parte de eda (usar modelos do curso de ppt da hashtag)
 - fazer uma apresentação da parte dos modelos (usar modelos do curso de ppt da hashtag)
-- revisar todo o conhecimento que coloquei no projeto e passar para o slide de resumo também
-- revisar toda a distribuição de pastas e arquivos do projeto, para ver quais fazem sentido e quais não fazem
-- revisar os textos explicativos do projeto, já que o modelo de classificação é para classificar se os clientes vão aceitar a 6 campanha e não
-    para reclassificar os clusters dos clientes futuros (apesar disso fazer total sentido. e quem sabe não faço essa parte também?)
-- TRATAR O OVERFITTING NO PROJETO
-- atualizar o cv após finalizar esse projeto
+- REVISAR TODO O PROJETO AO TERMINAR DE RESOLVER TODAS AS TAREFAS PENDENTES
