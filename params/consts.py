@@ -20,7 +20,7 @@ EDA_1 = '../reports/eda_1.html'
 RANDOM_STATE = 42
 
 # Images Outputs
-SCHEDULE = '../images/outputs_schedule.png'
+OUTPUT_SCHEDULE = '../images/output_schedule.png'
 
 # Images Illustrations
 WALLPAPER = '../images/wallpaper.png'
