@@ -6,10 +6,7 @@
 *.cfg text eol=lf
 *.csv text eol=lf 
 
-# Ignorando diretórios e arquivos sem utilidade ao rodar o projeto
+# Ignorando diretórios e arquivos sem utilidade ao baixar/rodar o projeto
 case/ export-ignore
-images/ export-ignore
 presentations/ export-ignore
-venv/ export-ignore
-.gitattributes export-ignore
 .gitignore export-ignore
