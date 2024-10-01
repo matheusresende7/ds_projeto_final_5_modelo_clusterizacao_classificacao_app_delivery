@@ -1,3 +1,1 @@
 Tarefas pendentes:
-- README: adicionar as informações mais relevantes do projeto, incluindo os resultados obtidos
-- REVISAR TODO O PROJETO AO TERMINAR DE RESOLVER TODAS AS TAREFAS PENDENTES

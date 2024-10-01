@@ -57,19 +57,19 @@ Por fim, foi criado um modelo de classificação usando Regressão Logística pa
 - `to_do.txt`: Arquivo para anotar as tarefas pendentes do projeto
 
 
-## Resultados EDA
+## Resultados - EDA
 ![EDA_03](images/output_resultados_eda_03.png)
 
 ![EDA_04](images/output_resultados_eda_04.png)
 
 ![EDA_05](images/output_resultados_eda_05.png)
 
-## Resultados Clusterização
+## Resultados - Clusterização
 ![Models_03](images/output_resultados_models_03.png)
 
 ![Models_04](images/output_resultados_models_04.png)
 
-## Resultados Classificação
+## Resultados - Classificação
 ![Models_05](images/output_resultados_models_05.png)
 
 ![Models_06](images/output_resultados_models_06.png)
