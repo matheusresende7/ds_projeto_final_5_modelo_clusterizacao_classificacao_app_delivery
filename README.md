@@ -15,7 +15,11 @@ E em seguida, construir um **modelo de classificação** de acordo com os result
 
 
 ## Descrição
-Nesse projeto de Ciência de Dados, resumidamente, foi realizada uma análise exploratória ampla identificando os principais insights do projeto e permitindo identificar duas principais personas para os clientes de uma plataforma de delivery. Em seguida, foi criado um modelo de clusterização usando K-Means para identificar melhor as personas dos clientes e permitindo assim a empresa direcionar melhor a campanha de marketing para os clientes que tem a maior probabilidade de aceitá-la. E por fim, foi criado um modelo de classificação usando Regressão Logística para prever se os clientes devem ou não aceitar as futuras campanhas de marketing da empresa.
+Nesse projeto de Ciência de Dados, resumidamente, foi realizada uma ampla análise exploratória gerando os principais insights do projeto e permitindo identificar duas principais personas para os clientes de uma plataforma de delivery. 
+
+Em seguida, foi criado um modelo de clusterização usando K-Means para identificar melhor as personas dos clientes e permitindo assim a empresa direcionar melhor a campanha de marketing para os clientes que tem a maior probabilidade de aceitá-la. 
+
+Por fim, foi criado um modelo de classificação usando Regressão Logística para prever se os clientes devem ou não aceitar as futuras campanhas de marketing da empresa.
 
 
 ## Metodologia 5W2H
