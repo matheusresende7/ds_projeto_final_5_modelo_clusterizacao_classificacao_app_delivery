@@ -19,19 +19,7 @@ Nesse projeto de Ciência de Dados, resumidamente, foi realizada uma ampla anál
 
 Em seguida, foi criado um modelo de clusterização usando K-Means para identificar melhor as personas dos clientes e permitindo assim a empresa direcionar melhor a campanha de marketing para os clientes que tem a maior probabilidade de aceitá-la. 
 
-Por fim, foi criado um modelo de classificação usando Regressão Logística para prever se os clientes devem ou não aceitar as futuras campanhas de marketing da empresa.
-
-
-## Metodologia 5W2H
-| **Questionamento**         | **Descrição**                                                                                                                                             |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **What?**<br>O que?         | A partir dos dados de campanhas piloto, **construir um modelo para segmentação de clientes em campanhas de marketing**                                      |
-| **Why?**<br>Por quê?        | O objetivo é que o modelo preveja o comportamento dos consumidores e torne possível aplicá-lo a toda a base de clientes, permitindo que a empresa identifique os clientes que têm maior probabilidade de aceitar a campanha, **otimizando assim os resultados das campanhas e tornando-as altamente lucrativas** |
-| **How?**<br>Como?           | O projeto será realizado através da **criação de modelos de clusterização e classificação para a segmentação de clientes**                                  |
-| **Where?**<br>Onde?         | Em uma **empresa de delivery**                                                                                                                            |
-| **When?**<br>Quando?        | A data de início do projeto é **01/09/2024**, com um prazo estipulado para conclusão de **30 dias**. Dessa forma, a data prevista para conclusão do projeto é **30/09/2024** |
-| **Who?**<br>Quem?           | **Matheus Resende** - Cientista de Dados                                                                                                                   |
-| **How Much?**<br>Quanto?    | O investimento estimado para o projeto é de **6.720MU**                                                                                                    |
+Por fim, foi criado um modelo de classificação usando Regressão Logística para prever se os clientes devem ou não aceitar as futuras campanhas de marketing da empresa.                                                                                                 |
 
 
 ## Referências
@@ -69,27 +57,21 @@ Por fim, foi criado um modelo de classificação usando Regressão Logística pa
 - `to_do.txt`: Arquivo para anotar as tarefas pendentes do projeto
 
 
-## Etapas do Projeto
-- **01. Definição do desafio – Challenge:** Essa etapa tem o objetivo de explicar o desafio que será resolvido no projeto. Dentre as etapas estão: objetivo do projeto, descrição do projeto, metodologia 5W2H, referências, bibliotecas, estrutura do projeto, etapas do projeto, dicionários do projeto e cronograma do projeto
-- **02. Obtenção dos Dados – Data Sourcing:** Essa etapa tem o objetivo de obter todos os dados que serão utilizados no projeto. Dentre as etapas estão: a obtenção de dados de banco de dados, APIs, web scraping e outras fontes de dados como em formato .csv
-- **03. Detalhamento do Projeto – Project Details:** Essa etapa tem o objetivo de visualizar e entender os dados iniciais do projeto. Dentre as etapas estão: geração de relatórios usando o Profile Report e a listagem das ações para tratar os dados
-- **04. Tratamento dos Dados – Data Processing:** Essa etapa tem o objetivo de tratar e modelar os dados para as próximas etapas do projeto. Dentre as etapas estão: corrigir o tipo de dados das colunas, tratar colunas com valores vazios, modelar colunas de tempo e idade, mesclar colunas com muitas categorias, unificar colunas semelhantes, criar colunas derivadas de outras, tratar colunas com outliers, tratar colunas com valores únicos, tratar colunas com valores constantes, excluir colunas auxiliares, e por fim gerar um novo relatório usando o Profile Report
-- **05. Análise Exploratória – Exploratory Data Analysis (EDA):** Essa etapa tem o objetivo de fazer uma análise geral dos dados para se obter os principais insights do projeto. Dentre as etapas estão: definir as hue columns, gerar uma lista de histogramas e boxplots com base nas hue columns, gerar um mapa de calor com as correlações entre as variáveis, gerar gráficos de barra com as maiores correlações positivas e negativas entre as principais colunas, identificar qualitativamente e quantitativamente os grupos com base nas análises realizadas, e por fim propor sugestões de melhorias e estimar o impacto da aplicação dessas sugestões
-- **06. Seleção do Modelo – Model Selection:** Essa etapa tem o objetivo de avaliar entre vários modelos, qual é o modelo tem a melhor performance e que será treinado na próxima etapa. Dentre as etapas estão: a aplicação de etapas do pipeline: pre processing, feature selection, dimensionality reduction, resampling, models e cross validation, e por fim a avaliação das métricas de avaliação dos modelos e a seleção de qual modelo será utilizado no projeto 
-- **07. Treinamento do Modelo – Model Training:** Essa etapa tem o objetivo de otimizar os hiperparâmetros no treinamento do modelo definido na etapa anterior. Dentre as etapas estão: a aplicação de etapas do pipeline: pre processing, feature selection, dimensionality reduction, resampling, models, cross validation e hyperparameter tuning, e por fim a comparação das métricas de avaliação do modelo entre como estava antes da otimização de hiperparâmetros e após a otimização
-- **08. Deploy em Produção – Deployment:** Essa etapa tem o objetivo de disponibilizar o modelo para uso. Dentre as etapas estão: disponibilização através de um arquivo jupyter notebook, python, arquivo executável e streamlit
-
-
-### Cronograma do Projeto - Gráfico de Gantt
-
-![Schedule](images/output_schedule.png)
-
-
 ## Resultados EDA
-...........................
+![EDA_03](images/output_resultados_eda_03.png)
+
+![EDA_04](images/output_resultados_eda_04.png)
+
+![EDA_05](images/output_resultados_eda_05.png)
 
 ## Resultados Clusterização
-...........................
+![Models_03](images/output_resultados_models_03.png)
+
+![Models_04](images/output_resultados_models_04.png)
 
 ## Resultados Classificação
-...........................
+![Models_05](images/output_resultados_models_05.png)
+
+![Models_06](images/output_resultados_models_06.png)
+
+![Models_07](images/output_resultados_models_07.png)
