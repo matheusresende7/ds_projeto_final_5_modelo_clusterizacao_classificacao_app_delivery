@@ -85,5 +85,11 @@ Por fim, foi criado um modelo de classificação usando Regressão Logística pa
 ![Schedule](images/output_schedule.png)
 
 
-## Resultados
+## Resultados EDA
+...........................
+
+## Resultados Clusterização
+...........................
+
+## Resultados Classificação
 ...........................

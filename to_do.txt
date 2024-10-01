@@ -1,6 +1,3 @@
 Tarefas pendentes:
 - README: adicionar as informações mais relevantes do projeto, incluindo os resultados obtidos
-- salvar os principais gráficos gerados no estudo para colocar na apresentação no final do projeto
-- fazer uma apresentação da parte de eda (usar modelos do curso de ppt da hashtag)
-- fazer uma apresentação da parte dos modelos (usar modelos do curso de ppt da hashtag)
 - REVISAR TODO O PROJETO AO TERMINAR DE RESOLVER TODAS AS TAREFAS PENDENTES
