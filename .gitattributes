@@ -7,6 +7,6 @@
 *.csv text eol=lf 
 
 # Ignorando diretórios e arquivos sem utilidade ao baixar/rodar o projeto
-case/ export-ignore
+docs/ export-ignore
 presentations/ export-ignore
 .gitignore export-ignore
