@@ -331,6 +331,56 @@ def histplots( # Função para criar listas de gráficos histplots
 
 
 
+def barplots( # Função para criar listas de gráficos barplots 
+    dataframe, # Passando o dataframe como parâmetro da função
+    columns, # Passando as colunas como parâmetro da função
+    hue_columns, # Passando os valores de hue columns como parâmetro da função
+    num_cols = 3, # Passando o número de colunas como parâmetro da função
+    height_figsize = 5, # Passando a altura do figsize como parâmetro da função
+):
+
+    num_cols = num_cols # Definindo o número de gráficos por linha, ou seja, as quantidade de colunas
+    total_columns = len(columns) # Definindo o total de colunas do dataset
+    num_rows = math.ceil(total_columns / num_cols) # Calculando quantas linhas serão necessárias
+
+    fig, axs = plt.subplots( # Criando a figura com os subplots
+        nrows=num_rows, # Passando o número de linhas da figura
+        ncols=num_cols, # Passando o número de colunas da figura
+        figsize=(20, height_figsize*num_rows), # Definindo o tamanho da figura
+        tight_layout=True, # Definindo o layout mais justo dos gráficos
+    )
+
+    if total_columns == 1: # Se houver apenas um gráfico, axs é um único objeto, então convertemos para uma lista para indexar uniformemente
+        axs = [axs]
+    elif num_rows == 1: # Se só há uma linha de gráficos, achatamos o array para 1D
+        axs = axs.flatten() 
+
+    axs = axs.flatten() if num_rows > 1 else axs # Garantindo que axs seja sempre 1D
+
+    for i, column in enumerate(columns): # Criando a estrutura de repetição para criar os gráficos
+        row = i // num_cols # Definindo o índice da linha
+        col = i % num_cols # Definindo o índice da coluna
+
+        sns.barplot( # Criando o gráfico de barras
+            data=dataframe, # Passando o dataframe para criar o gráfico
+            x=column, # Passando as colunas para criar o gráfico
+            y=hue_columns, # Passando os valores de hue_columns para criar o gráfico
+            errorbar=None, # Removendo intervalos de confiança do gráfico
+            ax=axs[i], # Posicionando o gráfico em seu devido subplot dentro da figura
+        )
+        axs[i].set_title(f'Barplot - {column}') # Adicionando título para cada subplot
+        axs[i].set_xlabel('') # Removendo título do eixo x
+        axs[i].set_ylabel('') # Removendo título do eixo y
+
+
+    if total_columns % num_cols != 0: # Removendo subplots vazios (se houver um número ímpar de colunas)
+        for subplot in range(total_columns, num_rows * num_cols): # Criando a estrutura de repetição para remover os subplots vazios (em um range do total de colunas até o último subplot previsto)
+            fig.delaxes(axs[subplot]) # Removendo o subplot
+
+    plt.show() # Exibindo a figura com os gráficos
+
+
+
 def elbow_silhouette( # Função para criar os gráficos de Elbow Method e Silhouette Method
     dataframe, # Passando o dataframe como parâmetro da função
     range_k=(2, 11), # Passando o range de intervalos de clusters como parâmetro da função (vai de 2 a 10, pois 11 é exclusive)
