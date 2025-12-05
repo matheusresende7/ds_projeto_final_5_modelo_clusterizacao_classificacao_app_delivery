@@ -1,0 +1,11 @@
+Education;Marital_Status;Children;HasChildren;Age;AgeGroup;Income;Recency;Complain;Days_Since_Enrolled;Years_Since_Enrolled;NumDealsPurchases;NumWebVisitsMonth;NumTotalPurchases;MntRegularProds;MntGoldProds;MntTotal;AcceptedCmpTotal;HasAcceptedCmp;Cluster
+Graduation;Single;0;0;27;18-30;78943.0;39;0;185;0;2;2;14;983;38;1021;2;1;0
+PhD;Partner;0;0;39;46-60;67932.0;35;0;98;0;1;1;13;1221;15;1236;3;1;0
+Graduation;Single;0;0;45;31-45;89243.0;36;0;234;0;2;3;10;1005;67;1072;1;1;0
+Master;Single;0;0;32;31-45;71932.0;64;0;194;0;0;2;12;1132;15;1147;4;1;0
+Graduation;Partner;1;1;59;46-60;24943.0;58;0;242;0;4;14;3;230;25;255;0;0;1
+Basic;Single;2;1;62;61+;32943.0;25;0;185;0;5;12;5;139;74;213;0;0;1
+Graduation;Single;1;1;36;31-45;39023.0;51;0;176;0;6;15;2;312;38;350;0;0;1
+PhD;Partner;1;1;29;18-30;53932.0;59;0;434;1;8;10;13;754;23;777;0;0;2
+Graduation;Single;2;1;49;46-60;45232.0;58;0;403;1;9;13;15;552;48;600;0;0;2
+PhD;Partner;2;1;51;46-60;42920.0;19;0;585;1;7;14;18;821;69;890;1;1;2
