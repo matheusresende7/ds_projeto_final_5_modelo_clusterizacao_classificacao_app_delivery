@@ -15,13 +15,13 @@ DATASET_CLUSTERED_PANDAS = '../data/03_silver/dataset_clustered_pandas.parquet'
 DATASET_CLUSTERED_PYSPARK = '../data/03_silver/dataset_clustered_pyspark'
 
 DATASET_MODELS_METRICS_PANDAS = '../data/04_gold/dataset_models_metrics_pandas.csv'
-DATASET_MODELS_METRICS_PYSPARK = '../data/04_gold/dataset_models_metrics_pyspark'
+DATASET_MODELS_METRICS_PYSPARK = '../data/04_gold/dataset_models_metrics_pyspark.csv'
 
 DATASET_MODEL_GROWTH_PANDAS = '../data/04_gold/dataset_model_growth_pandas.csv'
-DATASET_MODEL_GROWTH_PYSPARK = '../data/04_gold/dataset_model_growth_pyspark'
+DATASET_MODEL_GROWTH_PYSPARK = '../data/04_gold/dataset_model_growth_pyspark.csv'
 
 DATASET_COMPARING_METRICS_PANDAS = '../data/04_gold/dataset_comparing_metrics_pandas.csv'
-DATASET_COMPARING_METRICS_PYSPARK = '../data/04_gold/dataset_comparing_metrics_pyspark'
+DATASET_COMPARING_METRICS_PYSPARK = '../data/04_gold/dataset_comparing_metrics_pyspark.csv'
 
 # Models
 GRID_SEARCH_CLASSIFICATION_PANDAS_JOBLIB = '../models/grid_search_classification_pandas.joblib'
